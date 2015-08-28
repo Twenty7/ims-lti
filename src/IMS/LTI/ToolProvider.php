@@ -109,7 +109,6 @@ class ToolProvider {
 	public function getOAuthProvider()
 	{
 		if (is_null($this->oauth)) {
-			var_dump($this->postParameters);
 			$this->oauth = new OAuthProvider($this->postParameters);
 			$this->oauth->consumerHandler([$this, 'checkConsumerHandler']);
 			$this->oauth->timestampNonceHandler([$this, 'checkNonceHandler']);
